@@ -1,0 +1,19 @@
+:host {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh; /* centers vertically in the viewport */
+    padding: 16px;
+    box-sizing: border-box;
+}
+
+.poke-details {
+    border: 1px solid #ddd;
+    padding: 8px;
+    border-radius: 6px;
+    max-width: 420px;
+    width: 100%;
+}
+.poke-details img { width: 96px; height: 96px; object-fit: contain; }
+.summary { display: flex; gap: 12px; align-items: center; }
+.abilities, .stats { margin-top: 8px; }

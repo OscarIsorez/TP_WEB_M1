@@ -1,0 +1,14 @@
+<input [(ngModel)]="id">    
+<input readonly [value]="id">
+<input [(ngModel)]="filtervalue" placeholder="Filter by name">
+
+
+
+<select type="text" [(ngModel)]="id">
+    <option  [value]="pokemon.id" 
+    *ngFor="let pokemon of pokemons | filterPokemonPipe:'name':filtervalue">
+        {{pokemon.name}}
+    </option> 
+</select>
+<button (click)="printDetails()">Get Pokemon by Id</button>
+<app-display-poke-details [pokemonId]="id"></app-display-poke-details>
