@@ -4,7 +4,16 @@ import type { Todo } from '../modeles/Todo'
 import TodoComponent from './TodoComponent.vue'
 
 const input = ref("")
-const todos = ref<Todo[]>([])
+const todos = ref<Todo[]>(getInitialTodos())
+
+function getInitialTodos(): Todo[] {
+  return [
+    { id: 1, title: 'Learn Vue 3', state: 'done', date: new Date('2024-01-01') },
+    { id: 2, title: 'Build a Todo App', state: 'pending', date: new Date('2024-02-15') },
+    { id: 3, title: 'Master TypeScript', state: 'pending', date: new Date('2024-03-10') }
+  ]
+}
+
 const filter = ref<'all' | 'pending' | 'done'>('all')
 
 const filteredTodos = computed(() => {
