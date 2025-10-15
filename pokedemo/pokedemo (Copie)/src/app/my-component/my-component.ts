@@ -1,8 +1,15 @@
-// ...existing code...
 import { Component, OnInit } from '@angular/core';
 import { Pokedex } from '../pokedex';
 import { SelectedPokemonService } from '../selected-pokemon.service';
 
+
+
+/* 
+  This component allows the user to select a Pokemon by its ID or name.
+  It fetches the list of Pokemon from the Pokedex service and displays them in a dropdown.
+  The user can also filter the list by typing in the input field.
+  When a Pokemon is selected, it updates the SelectedPokemonService with the selected ID.
+*/
 @Component({
   selector: 'app-my-component',
   standalone: false,

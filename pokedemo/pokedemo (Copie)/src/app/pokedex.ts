@@ -1,6 +1,10 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 
+/* 
+  This service provides access to the Pokedex API.
+  It includes methods to fetch the list of Pokemon and their details.
+  */
 @Injectable({
   providedIn: 'root'
 })
