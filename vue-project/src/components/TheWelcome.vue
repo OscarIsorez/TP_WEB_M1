@@ -14,6 +14,6 @@ function foo() {
   <div :style="{ backgroundColor: color }">coucou</div>
 
   <button v-on:click="foo()">ok</button>
-  <div v-background> Etel O </div>
-  <div v-background:green> Etel O </div>
+  <div v-background>Etel O</div>
+  <div v-background:green>Etel O</div>
 </template>
