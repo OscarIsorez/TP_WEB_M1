@@ -1,3 +1,11 @@
+
+<!-- 
+  This component manages the list of todos, including adding, removing, and filtering them.
+  It uses the Todo data structure defined in modeles/Todo.ts.
+
+  The component's footer is displayed only if there are todos and at least one is pending. 
+  
+  -->
 <script setup lang="ts">
 import { ref, computed } from 'vue'
 import type { Todo } from '../modeles/Todo'

@@ -1,3 +1,8 @@
+
+<!-- TodoComponent.vue
+  This component represents a single todo item with functionalities to toggle its state,
+  delete it, and edit its title. It uses the Todo data structure defined in modeles/Todo.ts.
+-->
 <script setup lang="ts">
 import { defineProps, ref, nextTick } from 'vue'
 import type { Todo } from '../modeles/Todo'
