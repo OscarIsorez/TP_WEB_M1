@@ -1,3 +1,9 @@
+##Authors 
+
+TUAUX Baptiste
+ISOREZ Oscar
+LEPORT Etel
+
 ## Repo Structure
 
 Each branch in this repo is used for a single TP. For instance, TP0 stores the vanilla JS Tp.
