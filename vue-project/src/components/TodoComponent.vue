@@ -59,7 +59,7 @@ function cancelEdit() {
                 v-model="editTitle" 
                 @keyup.enter="saveEdit"
                 @keyup.escape="cancelEdit"
-                @blur="saveEdixt"
+                @blur="saveEdit"
                 style="flex: 1"
                 ref="editInput"
             />
