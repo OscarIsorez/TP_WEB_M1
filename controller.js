@@ -1,7 +1,28 @@
 
 var editingMode = { rect: 0, line: 1 };
 
+/* 
+	class controller(Pencil)
 
+	manage interactions between the user and the application
+	- listen to widgets events to update the current drawing attributes (colour, line width, shape)
+	- listen to mouse events on the canvas to draw shapes
+	- use an instance of DnD to manage mouse events
+	- use an instance of Drawing to store and render shapes
+
+	@properties
+	- currEditingMode : current shape to draw (rectangle or line)
+	- currLineWidth : current line width
+	- currColour : current colour in hexadecimal format
+	- currentShape : shape being currently drawn (0 if none) 
+
+	use models defined in model.js :
+	- Drawing : contains all drawn shapes
+	- Shape : abstract class for shapes
+	- Rectangle : a rectangle shape
+	- Line : a line shape
+
+	*/
 
 function Pencil(ctx, drawing, canvas) {
 	this.currEditingMode = editingMode.line;
