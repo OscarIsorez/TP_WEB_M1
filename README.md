@@ -18,4 +18,6 @@ open indicated port
 
 Pour ce TP, nous avons suivi le sujet à la lettre en implémentant les fonctionnalités de base d'une todo list.
 
-Pour cela, nous avons créé les composants TodoComponent et Todos. TodoComponent est un composant représentant un item dans la liste de todos. Il intéragit avec son composant parent, Todos. Ce dernier représente la todo list, avec les différentes interactions possibles. Nous avons ajouté plusieurs boutons comme des filtres, un bouton ajouter et un bouton "delete all".
+Pour cela, nous avons créé les composants TodoComponent et Todos. TodoComponent est un composant représentant un item dans la liste de todos. Il intéragit avec son composant parent, Todos. Ce dernier représente la todo list, avec les différentes interactions possibles. Nous avons ajouté plusieurs boutons comme des filtres, un bouton ajouter et un bouton "delete all". La liste de todos a été peuplée avec des fausses données.
+
+![1760611630069](image/README/1760611630069.png)
