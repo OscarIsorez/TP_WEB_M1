@@ -1,7 +1,7 @@
 ## INSTALLATION ET LANCEMENT
 dans un bash:
 
-cd TP_WEB_M1/pokedemo/pokedemo
+cd TP_WEB_M1/pokedemo
 
 curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.40.1/install.sh | bash
 
