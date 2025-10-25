@@ -4,7 +4,7 @@ TP Web : Javascript et HTML5
 
 go to 'canvas.html'
 
-if you don't have live server, install it
+if you don't have the live server extension on VS code, install it
 
 open with live server
 
