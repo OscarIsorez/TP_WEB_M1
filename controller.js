@@ -1,4 +1,4 @@
-
+ 
 var editingMode = { rect: 0, line: 1 };
 
 /* 
@@ -93,13 +93,31 @@ function Pencil(ctx, drawing, canvas) {
 
 	this.onInteractionEnd = function (dnd) {
 		if (this.currentShape != 0) {
-			// Add a unique ID to the shape and add it to the drawing
-			this.currentShape.id = Date.now(); // Simple ID generation
-			drawing.shapes.set(this.currentShape.id, this.currentShape);
+			var completedShape = this.currentShape;
+			completedShape.id = Date.now(); // Simple ID generation
+			drawing.shapes.set(completedShape.id, completedShape);
+			drawing.paint(ctx, canvas);
+
+			updateShapeList(completedShape.id, completedShape);
+			var removeBtn = document.getElementById("removeShape" + completedShape.id);
+			if (removeBtn) {
+				removeBtn.addEventListener('click', function (evt) {
+					remove(drawing, completedShape.id, ctx, canvas);
+				});
+			}
+			this.currentShape = 0;
 		}
-		this.currentShape = 0
-		drawing.paint(ctx, canvas)
 	}.bind(this);
 };
 
 
+function remove(drawing,shapeId,ctx,canvas) {
+	if (typeof ctx === 'undefined') ctx = window.ctx || null;
+	if (typeof canvas === 'undefined') canvas = window.canvas || null;
+
+	drawing.shapes.delete(parseInt(shapeId));
+	var li = document.getElementById("liRemoveShape" + shapeId);
+	if (li) li.remove();
+
+	if (ctx && canvas) drawing.paint(ctx, canvas);
+}
