@@ -5,6 +5,8 @@ git clone https://github.com/OscarIsorez/TP_WEB_M1.git
 
 cd TP_WEB_M1/pokedemo
 
+git checkout TP_Angular
+
 curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.40.1/install.sh | bash
 
 executer les commandes : 
