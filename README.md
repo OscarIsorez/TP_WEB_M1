@@ -3,9 +3,11 @@ dans un bash:
 
 git clone https://github.com/OscarIsorez/TP_WEB_M1.git
 
-cd TP_WEB_M1/pokedemo
+cd TP_WEB_M1/
 
-git checkout TP_Angular
+git checkout TP0
+
+cd pokedemo
 
 curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.40.1/install.sh | bash
 
