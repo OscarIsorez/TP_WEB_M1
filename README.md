@@ -2,7 +2,7 @@
 
 https://github.com/OscarIsorez/TP_WEB_M1.git
 
-cd TP_WEB_M1/pokedemo
+cd TP_WEB_M1
 
 TP Web : Javascript et HTML5
 
