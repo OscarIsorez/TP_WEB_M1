@@ -1,5 +1,9 @@
 # Installation
 
+https://github.com/OscarIsorez/TP_WEB_M1.git
+
+cd TP_WEB_M1/pokedemo
+
 TP Web : Javascript et HTML5
 
 go to 'canvas.html'
