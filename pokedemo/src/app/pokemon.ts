@@ -27,5 +27,4 @@ export class Pokemon {
     abilities: { ability: { name: string }, is_hidden: boolean, slot: number }[] = [];
     // stats entries from the API: { stat: { name }, base_stat }
     stats: { stat: { name: string }, base_stat: number }[] = [];
-    // optional extra fields can be added if needed
 }

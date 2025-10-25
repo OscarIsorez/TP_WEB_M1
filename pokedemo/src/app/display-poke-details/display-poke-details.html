@@ -2,7 +2,8 @@
   <h3>{{ pokemon.name }} (ID: {{ pokemon.id }})</h3>
 
   <div class="summary">
-    <img *ngIf="pokemon.sprites?.front_default" [src]="pokemon.sprites.front_default" alt="{{pokemon.name}}" style="width:2000px; height:auto; object-fit:contain;">
+    <img *ngIf="pokemon.sprites.front_default" [src]="pokemon.sprites.front_default" alt="{{pokemon.name}}"
+      style="width:2000px; height:auto; object-fit:contain;">
     <ul>
       <li>Base experience: {{ pokemon.base_experience }}</li>
       <li>Height: {{ pokemon.height }}</li>
@@ -11,20 +12,20 @@
     </ul>
   </div>
 
-  <section class="abilities" *ngIf="pokemon.abilities?.length">
+  <section class="abilities" *ngIf="pokemon.abilities.length">
     <h4>Abilities</h4>
     <ul>
       <li *ngFor="let a of pokemon.abilities">
-        {{ a.ability?.name }} — hidden: {{ a.is_hidden }} — slot: {{ a.slot }}
+        {{ a.ability.name }} — hidden: {{ a.is_hidden }} — slot: {{ a.slot }}
       </li>
     </ul>
   </section>
 
-  <section class="stats" *ngIf="pokemon.stats?.length">
+  <section class="stats" *ngIf="pokemon.stats.length">
     <h4>Stats</h4>
     <ul>
       <li *ngFor="let s of pokemon.stats">
-        {{ s.stat?.name }} : {{ s.base_stat }}
+        {{ s.stat.name }} : {{ s.base_stat }}
       </li>
     </ul>
   </section>
@@ -35,5 +36,3 @@
   <div *ngIf="error">{{ error }}</div>
   <div *ngIf="!loading && !error">Aucun pokémon sélectionné...</div>
 </ng-template>
-
-

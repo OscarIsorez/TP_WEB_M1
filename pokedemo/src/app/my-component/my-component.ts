@@ -60,7 +60,6 @@ export class MyComponent implements OnInit {
   }
 
   printDetails() {
-    // keep for debugging but prefer using SelectedPokemonService for communication
     this.pokedex.getPokemonDetails(Number(this.id)).subscribe({
       next: (resp: any) => {
         console.log('Pokemon Details:', resp);
@@ -71,4 +70,3 @@ export class MyComponent implements OnInit {
     });
   }
 }
-// ...existing code...
