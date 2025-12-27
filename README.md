@@ -1,33 +1,95 @@
-## INSTALLATION ET LANCEMENT
-dans un bash:
+# Pokedemo - Application Pokemon avec Tests
 
+Application Angular 20 permettant de consulter des informations sur les Pokemon via l'API PokeAPI.
+
+## Prérequis
+
+- Node.js : version 18 ou supérieure
+- npm : version 9 ou supérieure
+- Angular CLI : version 20.3.3
+
+## Installation
+
+1. Cloner le repository :
+```bash
 git clone https://github.com/OscarIsorez/TP_WEB_M1.git
+cd TP_WEB_M1
+```
 
-cd TP_WEB_M1/
-
-git checkout TP0
-
-cd pokedemo
-
-curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.40.1/install.sh | bash
-
-executer les commandes : 
-
-export NVM_DIR="$HOME/.nvm"
-
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
-
-nvm install 22
-
-npm install -g @angular/cli
-
+2. Installer les dépendances du dossier racine :
+```bash
 npm install
+```
 
-ng serve
+3. Installer les dépendances du projet Angular :
+```bash
+cd pokedemo
+npm install
+```
 
-choisir no
+4. Installer Cypress (tests E2E) :
+```bash
+npm install cypress --save-dev --legacy-peer-deps
+```
 
-ouvrir le port local indiqué
+Note : Le flag `--legacy-peer-deps` est nécessaire pour résoudre les conflits de dépendances entre jest-preset-angular et Angular 20.
+
+## Lancer l'application
+
+Depuis le dossier `pokedemo` :
+
+```bash
+npm start
+```
+
+L'application sera accessible sur http://localhost:4200/
+
+## Tests Unitaires (Jest)
+
+### Lancer les tests depuis la racine du projet
+
+```bash
+cd TP_WEB_M1
+npm run test:coverage
+```
+
+### Résultats attendus
+- 38 tests qui passent
+- 100% de coverage sur statements, functions et lines
+- 84.61% de coverage sur branches
+
+### Fichiers de tests
+- `pokedemo/src/app/**/*.spec.ts` : Tests unitaires avec Jest
+- Approche : Shallow testing avec mocks Jest
+- Tous les composants, services et pipes sont testés
+
+## Tests E2E (Cypress)
+
+### Prérequis : L'application doit tourner
+
+1. Dans un terminal, démarrer l'application :
+```bash
+cd pokedemo
+npm start
+```
+
+2. Dans un autre terminal, lancer Cypress :
+```bash
+cd pokedemo
+npx cypress open
+```
+
+3. Dans l'interface Cypress :
+   - Sélectionner "E2E Testing"
+   - Choisir un navigateur (Chrome recommandé)
+   - Cliquer sur le fichier pokemon.cy.ts
+
+### Scénarios testés
+- Affichage du titre de l'application
+- Chargement de la liste des Pokemon
+- Sélection d'un Pokemon
+- Filtrage de la liste par nom
+- Affichage des détails et de l'image du Pokemon
 
 # Explications 
 
@@ -46,3 +108,4 @@ Pour les URLs, Angular détecte les liens louches type javascript:alert('xss') e
 Si on veut vraiment afficher du HTML non filtré, il faut utiliser explicitement DomSanitizer.bypassSecurityTrustHtml(). C'est fait exprès pour que le développeur soit conscient qu'il désactive une protection.
 
 En gros, Angular force les bonnes pratiques : tout est sécurisé par défaut, et il faut faire un effort pour contourner les protections. Ça réduit énormément les risques d'XSS accidentelles.
+
