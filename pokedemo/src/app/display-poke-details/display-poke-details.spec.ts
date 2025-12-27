@@ -1,20 +1,25 @@
-import { ComponentFixture, TestBed } from '@angular/core/testing';
-
 import { DisplayPokeDetails } from './display-poke-details';
+import { Pokedex } from '../pokedex';
+import { SelectedPokemonService } from '../selected-pokemon.service';
+import { of } from 'rxjs';
 
 describe('DisplayPokeDetails', () => {
   let component: DisplayPokeDetails;
-  let fixture: ComponentFixture<DisplayPokeDetails>;
+  let pokedexMock: jest.Mocked<Pokedex>;
+  let selectedServiceMock: jest.Mocked<SelectedPokemonService>;
 
-  beforeEach(async () => {
-    await TestBed.configureTestingModule({
-      declarations: [DisplayPokeDetails]
-    })
-    .compileComponents();
-
-    fixture = TestBed.createComponent(DisplayPokeDetails);
-    component = fixture.componentInstance;
-    fixture.detectChanges();
+  beforeEach(() => {
+    pokedexMock = {
+      getPokemonDetails: jest.fn()
+    } as any;
+    
+    selectedServiceMock = {
+      selected$: of(''),
+      getSelected: jest.fn(),
+      setSelected: jest.fn()
+    } as any;
+    
+    component = new DisplayPokeDetails(pokedexMock, selectedServiceMock);
   });
 
   it('should create', () => {
