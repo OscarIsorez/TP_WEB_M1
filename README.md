@@ -2,6 +2,10 @@
 
 Application Angular 20 permettant de consulter des informations sur les Pokemon via l'API PokeAPI.
 
+## Stratégie de Tests
+
+Pour ce projet, nous avons mis en place deux types de tests. Nous avons fait des **tests unitaires** avec Jest pour tester individuellement chaque composant, service et pipe, afin de vérifier que tout marche bien de manière isolée. Jest génère aussi un **rapport de coverage** qui nous montre quel pourcentage du code est testé, ce qui permet de repérer les morceaux de code qu'on aurait oublié de tester. Nous avons aussi ajouté des **tests end-to-end** avec Cypress pour s'assurer que l'application fonctionne correctement en conditions réelles, en simulant les interactions utilisateur comme on le ferait manuellement.
+
 ## Prérequis
 
 - Node.js : version 18 ou supérieure
